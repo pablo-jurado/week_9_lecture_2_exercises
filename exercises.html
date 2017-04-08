@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title><meta charset="UTF-8">
+<script src="http://code.jquery.com/jquery-3.1.0.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+$(function() {
+// jQuery statement goes here ...
+  function apiABC () {
+    var url = 'http://api.abc.com?ABC=123'
+
+    $.get(url).done(response).fail(notResponse)
+
+    function response (data) {
+      console.log(data)
+    }
+    function notResponse () {
+      console.log('Sorry, something went wrong')
+    }
+  }
+
+  function apiXYZ () {
+    var url = 'http://api.xyz.com'
+
+    $.get(url).done(response).fail(notResponse)
+
+    function response (data) {
+      console.log(data)
+    }
+    function notResponse () {
+      console.log('Sorry, something went wrong')
+    }
+  }
+
+  $('#hideme').hide()
+  $('#content').css('color', 'green')
+
+});
+</script>
+</head>
+<body>
+
+</body>
+</html>
